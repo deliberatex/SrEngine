@@ -1,0 +1,10 @@
+^D:\WORKSTATION\SRENGINE\SRENGINE\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SD:/workstation/SrEngine/SrEngine -BD:/workstation/SrEngine/SrEngine/SrEngine --check-stamp-file D:/workstation/SrEngine/SrEngine/SrEngine/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

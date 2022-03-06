@@ -1,7 +1,7 @@
 #pragma once
 
 // Pre-Compile Headers
-
+#pragma comment(lib,"opengl32.lib")
 // Basic
 #include <set>
 #include <map>
@@ -22,8 +22,10 @@
 #include <functional>
 #include <filesystem>
 #include <unordered_map>
+#include <assert.h>
 
 // OpenGL
+//#pragma comment(lib,"glew32.lib")
 #include <GL/glew.h>
 
 // GLFW
@@ -35,6 +37,9 @@
 #include <glm/gtc/type_ptr.hpp>
 #include <glm/gtx/quaternion.hpp>
 #include <glm/gtc/matrix_transform.hpp>
+
+#include "Errors/Errors.h"
+#include "Engine/PathHelper.h"
 
 // Platform
 #ifdef SrEngine_WINDOW

@@ -1,8 +1,7 @@
 # Directories
 .vs/
-build/
-out/
 enc_temp_folder/
+out/
 
 # Files
 dna.txt

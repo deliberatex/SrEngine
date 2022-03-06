@@ -1,3 +1,0 @@
-D:/workstation/SrEngine/SrEngine/SrEngine/CMakeFiles/ALL_BUILD.dir
-D:/workstation/SrEngine/SrEngine/SrEngine/CMakeFiles/ZERO_CHECK.dir
-D:/workstation/SrEngine/SrEngine/SrEngine/Source/Sr_Core/CMakeFiles/Sr_Core.dir

@@ -57,7 +57,7 @@ public:
 
 			shadow.Bind();
 			shadow.SetMatrix4f("LightViewProj", glm::value_ptr(space));
-			
+
 			// Other Shaders
 
 			for (GLuint i = 0; i < 2; i++)

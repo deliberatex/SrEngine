@@ -269,7 +269,7 @@ namespace SrEngine
 	{
 		ModelRenderer model;
 		const char* name = xModelRenderer->Attribute("name");
-		model.Name = std::string(name);
+		model.SetModelRendererName(std::string(name));
 		ECS::Manager.AddComponent(entityid, model);
 	}
 

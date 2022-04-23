@@ -79,9 +79,9 @@ namespace SrEngine
 		ECS::Registrar<DirectionalLight>("Directional Light");
 
 		// register systems
+		ECS::Manager.AddSystem<DirectionalLightSystem>();
 		ECS::Manager.AddSystem<SpotLightSystem>();
 		ECS::Manager.AddSystem<PointLightSystem>();
-		ECS::Manager.AddSystem<DirectionalLightSystem>();
 		ECS::Manager.AddSystem<SkyBoxRendererSystem>();
 
 		ECS::Manager.AddSystem<MeshRendererSystem>();

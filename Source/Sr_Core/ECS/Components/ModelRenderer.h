@@ -17,6 +17,12 @@ struct ModelRenderer : public ECS::BaseComponent
 		Renderer = SrEngine::Resource.GetModel(Name);
 	}
 
+	void SetModelRendererName(std::string name)
+	{
+		Name = name;
+		Renderer = SrEngine::Resource.GetModel(Name);
+	}
+
 	std::string Name;
 	std::shared_ptr<Model3D> Renderer;
 };

@@ -18,6 +18,8 @@
 #include "CompUIs/MeshUI.h"
 #include "CompUIs/RigidbodyUI.h"
 
+#include "Timer/Timer.h"
+
 namespace SrEngine
 {
 
@@ -358,8 +360,8 @@ namespace SrEngine
 			ImGui::BeginChildFrame(ImGui::GetID("ShadowMapFrame"), ImVec2(0, 0), ImGuiWindowFlags_NoScrollbar);
 			{
 				const ImVec2& size = ImVec2(SHADOW_WIDTH, SHADOW_HEIGHT);
-				ImGui::Image(shadowFrameTexture, size, ImVec2(0, 1), ImVec2(1, 0));
-				
+				ImGui::Image((ImTextureID)1, size, ImVec2(0, 1), ImVec2(1, 0));
+				//std::cout << "shadowFrameTextureID:" << shadowFrameTexture << std::endl;
 			}
 			ImGui::PopStyleVar();
 			ImGui::EndChildFrame();
@@ -431,10 +433,11 @@ namespace SrEngine
 				ImGui::Text("Mouse down:");		for (int i = 0; i < count; i++) if (ImGui::IsMouseDown(i))      { ImGui::SameLine(); ImGui::Text("b%d (%.02f secs)", i, io.MouseDownDuration[i]); }
 				ImGui::Text("SelectedEntity:");		ImGui::SameLine();		if (selectedEntity >= 0) { ImGui::Text(std::get<1>(entities[selectedEntity]).c_str()); }
 				ImGui::NewLine();
-				if (hasSaved == true) {
-					
+				if (hasSaved == true) 
+				{
+					Timer.DeltaTime();
 					ImGui::Text("Scene Saved Success!");
-					hasSaved = false;
+					
 				}
 
 			}

@@ -22,20 +22,17 @@
 // 	vs_data.TexCoords = aTexCoords;
 // 	vs_data.FragPos = vec3(Model * vec4(aPos, 1.0));
 // 	vs_data.Normal = transpose(inverse(mat3(Model))) * aNormal;
-// 	gl_Position = Projection * View * Model * vec4(aPos, 1.0f);
+// 	gl_Position = LightViewProj * Model * vec4(aPos, 1.0f);
 // 	vs_data.FragPosLightSpace = LightViewProj * vec4(vs_data.FragPos, 1.0);
 // }
 
 #version 330 core
-layout (location = 0) in vec3 position;
+layout (location = 0) in vec3 aPos;
 
-uniform mat4 View;
-uniform mat4 Model;
-uniform mat4 Projection;
 uniform mat4 LightViewProj;
 uniform mat4 model;
 
 void main()
 {
-    gl_Position = LightViewProj * model * vec4(position, 1.0f);
+    gl_Position = LightViewProj * model * vec4(aPos, 1.0);
 }

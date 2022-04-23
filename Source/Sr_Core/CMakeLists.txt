@@ -99,7 +99,7 @@
      "Serializer/XMLSerializer.cpp"
      "Engine/PathHelper.h"
      "Engine/PathHelper.cpp"
-     "Editor/CompUIs/RigidbodyUI.h" "Objects/ShadowMap.h")
+     "Editor/CompUIs/RigidbodyUI.h"  "ECS/Components/Particle.h" "ECS/Systems/ParticleSystem.h")
 
 
 

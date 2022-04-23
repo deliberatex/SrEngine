@@ -18,19 +18,22 @@ public:
 		AddComponentSignature<Transform>();
 		AddComponentSignature<ModelRenderer>();
 
-		shader = Shader(Resource.Program("MESH"));
+		shader[0] = Shader(Resource.Program("MESH"));
+		shader[1] = Shader(Resource.Program("RENDERSHADOW"));
 	}
 
 	void Render() override
 	{
-		shader.Bind();
+		shader[0].Bind();
 		for (auto entity : entities)
 		{
-			ECS::Manager.GetComponent<Transform>(entity).SetModelUniform(shader);
-			ECS::Manager.GetComponent<ModelRenderer>(entity).Renderer->Render(shader);
+			ECS::Manager.GetComponent<Transform>(entity).SetModelUniform(shader[0]);
+			ECS::Manager.GetComponent<ModelRenderer>(entity).Renderer->Render(shader[0]);
+
+			
 		}
 	}
 
 private:
-	Shader shader;
+	Shader shader[2];
 };

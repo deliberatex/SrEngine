@@ -32,16 +32,17 @@ namespace SrEngine
 		//LoadModel("PACK", "Resource/Models/sphere.obj");
 		LoadModel("PACK", PathHelper::GetAbsolutePath("Resource/Models/nature/NatureFreePack1.obj"));
 		//LoadModel("PACK", "Resource/Models/nature/Tree1.obj");
-		//LoadModel("PACK", PathHelper::GetAbsolutePath("Resource/Models/nature/Rock1.obj"));
+		LoadModel("ROCKS", PathHelper::GetAbsolutePath("Resource/Models/nature/Rock1.obj"));
 		//LoadModel("PACK", "Resource/Models/backpack/backpack.obj");
 
 		// shaders
 		CreateProgram("SPRITE", "SpriteV.shader", "SpriteF.shader");
 		CreateProgram("SHADOW", "ShadowV.shader", "ShadowF.shader");
+		CreateProgram("RENDERSHADOW", "RenderShadowV.shader", "RenderShadowF.shader");
 		CreateProgram("SKYBOX", "SkyboxV.shader", "SkyboxF.shader");
 		CreateProgram("MESH", "MeshV.shader", "MeshF.shader");
 		CreateProgram("GRID", "GridV.shader", "GridF.shader");
-
+		CreateProgram("PARTICLE", "ParticleV.shader", "ParticleF.shader");
 
 
 		// textures
@@ -49,6 +50,7 @@ namespace SrEngine
 		AddTex2D("box2", LoadTex2D(PathHelper::GetAbsolutePath("Resource/Textures/box2.png")));
 		AddTex2D("light", LoadTex2D(PathHelper::GetAbsolutePath("Resource/Textures/light.png")));
 		AddTex2D("camera", LoadTex2D(PathHelper::GetAbsolutePath("Resource/Textures/camera.png")));
+		AddTex2D("particle", LoadTex2D(PathHelper::GetAbsolutePath("Resource/Textures/particle.png")));
 
 		// skybox cubemap
 		std::vector<std::string> facepaths;

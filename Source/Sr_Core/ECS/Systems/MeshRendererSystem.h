@@ -18,6 +18,12 @@ public:
 		AddComponentSignature<Transform>();
 		AddComponentSignature<MeshRenderer>();
 		shaders[0] = Shader(Resource.Program("MESH"));
+
+
+		depthBuffer = Core.ShadowBuffer();
+		sampleBuffer = Core.GetSceneBufferID();
+
+
 	}
 
 	void Render() override
@@ -39,4 +45,6 @@ public:
 
 private:
 	Shader shaders[1];
+	DepthBuffer* depthBuffer;
+	SamplerBuffer* sampleBuffer;
 };

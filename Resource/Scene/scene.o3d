@@ -2,7 +2,7 @@
 <Scene>
     <Entity>
         <EntityName value="Main Camera"/>
-        <Transform x="9.425318717956543" y="24.262008666992188" z="63.346084594726562" rx="-11.724933624267578" ry="0.08507692813873291" rz="0.61043787002563477" sx="1.5" sy="1.2993155717849731" sz="1.5000014305114746"/>
+        <Transform x="-1.6423742771148682" y="24.149890899658203" z="63.386131286621094" rx="-11.723429679870605" ry="0.20734424889087677" rz="0.58041536808013916" sx="1.5" sy="1.2993155717849731" sz="1.5000014305114746"/>
         <Camera/>
         <SpriteRenderer name="camera"/>
     </Entity>
@@ -13,9 +13,9 @@
     </Entity>
     <Entity>
         <EntityName value="Ground"/>
-        <Transform x="-1.1004147529602051" y="-0.21628451347351074" z="3.4252238273620605" rx="0" ry="-0" rz="0" sx="79.606826782226562" sy="0.96988105773925781" sz="79.606773376464844"/>
+        <Transform x="-0.72487020492553711" y="0.1058661937713623" z="0.35789656639099121" rx="0" ry="-0" rz="0" sx="79.606826782226562" sy="0.96988105773925781" sz="79.606773376464844"/>
         <MeshRenderer name="CUBE">
-            <Material ao="1" metallic="0.0099999997764825821" roughness="1" albedoR="0.999991774559021" albedoG="1" albedoB="0.99998998641967773"/>
+            <Material ao="1" metallic="0.0099999997764825821" roughness="1" albedoR="0.20143276453018188" albedoG="0.48266667127609253" albedoB="0.14029510319232941"/>
         </MeshRenderer>
     </Entity>
     <Entity>
@@ -24,8 +24,8 @@
         <ModelRenderer name="PACK"/>
     </Entity>
     <Entity>
-        <EntityName value="Tree3"/>
-        <Transform x="-31.856166839599609" y="0" z="4.6317119598388672" rx="0" ry="56.706077575683594" rz="0" sx="0.9999997615814209" sy="3.5751588344573975" sz="0.9999997615814209"/>
+        <EntityName value="Tree33333】"/>
+        <Transform x="20" y="2.173151969909668" z="25.188493728637695" rx="1.6962107419967651" ry="56.689567565917969" rz="2.0294208526611328" sx="0.99999988079071045" sy="3.5751581192016602" sz="2.7614486217498779"/>
         <ModelRenderer name="PACK"/>
     </Entity>
     <Entity>
@@ -35,8 +35,13 @@
     </Entity>
     <Entity>
         <EntityName value="Tree5"/>
-        <Transform x="-12.279388427734375" y="0" z="32.164192199707031" rx="0" ry="-34.338352203369141" rz="0" sx="0.99999982118606567" sy="1" sz="0.99999982118606567"/>
+        <Transform x="-12.279388427734375" y="0.30115330219268799" z="32.164192199707031" rx="0" ry="-34.338348388671875" rz="0" sx="0.99999982118606567" sy="1" sz="0.99999982118606567"/>
         <ModelRenderer name="PACK"/>
+    </Entity>
+    <Entity>
+        <EntityName value="Rock"/>
+        <Transform x="10.743292808532715" y="1.0720802545547485" z="30.142480850219727" rx="0" ry="-34.338348388671875" rz="0" sx="0.99999982118606567" sy="1" sz="0.99999982118606567"/>
+        <ModelRenderer name="ROCKS"/>
     </Entity>
     <Entity>
         <EntityName value="Directional Light"/>
@@ -48,10 +53,16 @@
     </Entity>
     <Entity>
         <EntityName value="point light"/>
-        <Transform x="10.315614700317383" y="8.8266782760620117" z="33.027847290039062" rx="-93.483062744140625" ry="-0" rz="0" sx="0.9999997615814209" sy="1" sz="1"/>
+        <Transform x="-20.27928352355957" y="14.294726371765137" z="1.4707977771759033" rx="-93.483062744140625" ry="-0" rz="0" sx="0.9999995231628418" sy="1" sz="1"/>
         <MeshRenderer name="CUBE">
-            <Material ao="1" metallic="0.67000001668930054" roughness="1" albedoR="0.72113406658172607" albedoG="0.74933332204818726" albedoB="0.24578133225440979"/>
+            <Material ao="1" metallic="0.2800000011920929" roughness="1" albedoR="0.72113406658172607" albedoG="0.74933332204818726" albedoB="0.24578133225440979"/>
         </MeshRenderer>
-        <PointLight colorR="0.65333330631256104" colorG="0.43409183621406555" colorB="0.23171553015708923" intensity="459"/>
+        <PointLight colorR="0.98933333158493042" colorG="0.477518230676651" colorB="0.68224483728408813" intensity="1232"/>
+    </Entity>
+    <Entity>
+        <EntityName value="Entity10"/>
+        <Transform x="-19.06672477722168" y="-127.25453186035156" z="6.9777917861938477" rx="0" ry="-0" rz="0" sx="1" sy="1.6054834127426147" sz="1"/>
+        <ModelRenderer name="PACK"/>
+        <RigidBody mass="1" gscale="1" Fx="0" Fy="0" Fz="0" Dx="0" Dy="0" Dz="0"/>
     </Entity>
 </Scene>

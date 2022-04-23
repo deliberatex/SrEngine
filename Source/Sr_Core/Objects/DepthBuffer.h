@@ -44,6 +44,7 @@ public:
 	void Bind()
 	{
 		GLCALL(glBindFramebuffer(GL_FRAMEBUFFER, bufferID));
+		std::cout << "FrameBufferID:" << bufferID << std::endl;
 	}
 
 	void UnBind()

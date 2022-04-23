@@ -1,7 +1,7 @@
 #pragma once
 
 // Pre-Compile Headers
-#pragma comment(lib,"opengl32.lib")
+//#pragma comment(lib,"opengl32.lib")
 // Basic
 #include <set>
 #include <map>
@@ -23,6 +23,7 @@
 #include <filesystem>
 #include <unordered_map>
 #include <assert.h>
+#include <ctime>
 
 // OpenGL
 //#pragma comment(lib,"glew32.lib")
